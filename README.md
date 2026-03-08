@@ -1,5 +1,10 @@
 # VeloDB: Sub-Microsecond Lock-Free Storage Engine
 
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
+[![Build Status](https://github.com/martian-coder/velodb/actions/workflows/build.yml/badge.svg)](https://github.com/martian-coder/velodb/actions)
+[![Version](https://img.shields.io/badge/Version-1.0-orange.svg)](https://github.com/martian-coder/velodb/releases)
+[![Performance](https://img.shields.io/badge/Performance-2.5M_Ops/s-brightgreen.svg)](#performance)
+
 VeloDB is a high-performance, asynchronous, event-driven NoSQL database designed for ultra-low latency workloads. It features a custom **Lock-Free Copy-On-Write (COW) B-Tree**, **Succinct Adaptive Indexing (SAI)**, and the **Nexus Protocol (NXP)** for wire-speed data transport.
 
 ## 🚀 Key Features
@@ -11,6 +16,16 @@ VeloDB is a high-performance, asynchronous, event-driven NoSQL database designed
 - **Python Bindings**: High-performance C++ core exposed via a seamless Python API.
 
 ## 🛠️ Architecture
+
+```mermaid
+graph TD
+    Client[Client Application] -->|NXP Protocol| Server[VeloDB Server]
+    Server -->|Direct Write| HLSM[Hybrid LSM Log]
+    Server -->|Atomic Update| Root[LF-BTree Root]
+    Root -->|Immutable| Slabs[Slab Arena]
+    HLSM -->|Periodic| Index[SAI Succinct Index]
+    Index -->|Range Query| Client
+```
 
 ### Lock-Free COW B-Tree
 VeloDB utilizes a multi-level B-Tree where nodes are immutable slabs. Updates create new root paths via recursive path-copying, ensuring that readers always have a consistent view without ever needing a lock.
@@ -28,7 +43,7 @@ This project is, and will always remain, a high-integrity endeavor. We believe i
 
 ```bash
 # Clone the repository
-git clone https://github.com/user/velodb
+git clone https://github.com/martian-coder/velodb
 cd velodb
 
 # Spin up the stack (VeloDB + Monitoring)
