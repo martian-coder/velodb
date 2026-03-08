@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  velodb:
+    build: .
+    ports:
+      - "9001:9001"
+    volumes:
+      - ./data:/data
+    command: ["./velodb-server", "--data-dir", "/data", "--port", "9001"]
+
+  exporter:
+    build:
+      context: .
+      dockerfile: Dockerfile.exporter
+    ports:
+      - "8000:8000"
+    depends_on:
+      - velodb
+    environment:
+      - VELODB_HOST=velodb
+      - VELODB_PORT=9001
+
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    depends_on:
+      - exporter
+
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus

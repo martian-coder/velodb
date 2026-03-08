@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VeloDB | Sub-Microsecond Lock-Free Storage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">VeloDB</div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#performance">Performance</a>
+                <a href="https://github.com/martian-coder/velodb" target="_blank">GitHub</a>
+                <a href="#support" class="btn-support">Support</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Speed Beyond Limits.</h1>
+                <p>An ultra-low latency, lock-free, in-memory-first key-value store built for the next generation of performance-critical applications.</p>
+                <div class="hero-btns">
+                    <a href="https://github.com/martian-coder/velodb" class="btn-primary">Get Started</a>
+                    <a href="#support" class="btn-secondary">Donate via GPay</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="glow"></div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="feature-card">
+                <h3>Lock-Free COW B-Tree</h3>
+                <p>Parallel reads and writes with zero contention using immutable slabs and atomic root swaps.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Nexus Protocol (NXP)</h3>
+                <p>Custom binary wire protocol optimized for high-bandwidth, bypasses overhead of JSON/HTTP.</p>
+            </div>
+            <div class="feature-card">
+                <h3>SAI Indexing</h3>
+                <p>Succinct Adaptive Indexing for O(1) rank/select operations and lightning-fast range scans.</p>
+            </div>
+        </section>
+
+        <section id="performance" class="stats">
+            <div class="stat-item">
+                <span class="stat-value">2.5M+</span>
+                <span class="stat-label">Ops / Second</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">&lt;1µs</span>
+                <span class="stat-label">Latency</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">100%</span>
+                <span class="stat-label">Lock-Free</span>
+            </div>
+        </section>
+
+        <section id="support" class="support">
+            <div class="support-card">
+                <h2>Support VeloDB</h2>
+                <p>Help us stay independent and keep pushing the boundaries of storage engineering. Every contribution powers the next sub-microsecond breakthrough.</p>
+                <div class="gpay-container">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Google_Pay_%28GPay%29_Logo.svg" alt="Google Pay" class="gpay-logo">
+                    <div class="upi-id">UPI ID: <strong>martian@upi</strong></div>
+                </div>
+                <p class="small">Scan to donate via GPay</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 VeloDB Team. All rights reserved.</p>
+    </footer>
+</body>
+</html>

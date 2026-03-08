@@ -1,0 +1,10 @@
+^D:\VELODB\BUILD\_DEPS\PYBIND11-SUBBUILD\CMAKEFILES\24B0C414F82F8B9B63A02F7B2E649CE5\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Velodb/build/_deps/pybind11-subbuild -BD:/Velodb/build/_deps/pybind11-subbuild --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/Velodb/build/_deps/pybind11-subbuild/pybind11-populate.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

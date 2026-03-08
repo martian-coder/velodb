@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Velodb\build\_deps\asio-subbuild\CMakeFiles\c5c9a8a93192b74d7cde63e8f0ff52ac\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5EC7256B-B1CE-36E2-AEE1-C230CCF0CDBA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
