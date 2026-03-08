@@ -1,3 +1,0 @@
-D:/Velodb/build/_deps/asio-subbuild/CMakeFiles/asio-populate.dir
-D:/Velodb/build/_deps/asio-subbuild/CMakeFiles/ALL_BUILD.dir
-D:/Velodb/build/_deps/asio-subbuild/CMakeFiles/ZERO_CHECK.dir

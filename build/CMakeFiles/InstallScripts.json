@@ -1,9 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"D:/Velodb/build/cmake_install.cmake",
-		"D:/Velodb/build/_deps/pybind11-build/cmake_install.cmake",
-		"D:/Velodb/build/tests/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
